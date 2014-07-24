@@ -45,11 +45,7 @@ module HQMF2JS
   }
 };"
       reduce = "function reduce(bucket, counts) {
-  var sum = 0;
-  while(counts.hasNext()){
-    sum += counts.next();
-  }
-  return sum;
+  return Array.sum(counts);
 };"
       functions = "#{hqmf_utils}\nvar OidDictionary = #{codes_json};\n#{converted_hqmf}"
 
